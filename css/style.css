@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 1210px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ---- HEADER ---- */
+
+.header {
+    margin-bottom: 70px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    align-self: center;
+}
+
+.search {
+    max-width: 763px;
+    width: 100%;
+    border: 1px solid #EBEBF1;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 12px 0;
+    margin: 0 50px;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-wrapper__img {
+    margin-right: 9px;
+    padding-left: 14px;
+}
+
+.search-wrapper__input {
+    width: 92%;
+    border: none;
+
+    color: #768298;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.search-wrapper__input::-webkit-input-placeholder {
+    color: #BBC4D6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-wrapper__input::-moz-placeholder {
+    color: #BBC4D6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-wrapper__input:-ms-input-placeholder {
+    color: #BBC4D6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-wrapper__input::-ms-input-placeholder {
+    color: #BBC4D6;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-wrapper__input::placeholder {
+    color: #BBC4D6;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.user {
+    position: relative;
+    margin-left: 19px;
+}
+
+.user-sm {
+    display: none;
+}
+
+.user::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 200%;
+    background-color: #EBEBF1;
+    top: -23px;
+    left: -19px;
+}
+
+.user-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #768298;
+}
+
+.user-link:hover {
+    text-decoration: underline;
+}
+
+.user-name {
+    font-size: 14px;
+
+    margin-right: 10px;
+}
+
+/* ---- END HEADER ---- */
+
+/* ---- PARTNERS ---- */
+
+.title {
+    font-weight: 500;
+    font-size: 36px;
+    color: #121920;
+    text-transform: uppercase;
+}
+
+.partners-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 15px -15px;
+    max-width: 1200px;
+    width: 105%;
+}
+
+.partners-card {
+    max-width: 270px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 15px;
+    transition: box-shadow ease 0.5s;
+}
+
+
+.partners-card:hover {
+    box-shadow: -3px 0px 40px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(164, 164, 164, 0.03);
+}
+
+/* ---- END PARTNERS ---- */
+
+
+/* ---- MEDIA ---- */
+
+@media screen and (max-width: 1190px) {
+    .partners-wrapper {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .partners-wrapper {
+        margin: 15px -5px;
+        width: 100%;
+    }
+
+    .partners-card {
+        margin: 15px 6px;
+        max-width: 229px;
+    }
+
+    .partners-card__img {
+        max-width: 185px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .search {
+        order: 1;
+        margin: 0;
+        margin-top: 15px;
+        border: none;
+        padding-bottom: 0;
+    }
+
+    .search::before {
+        content: "";
+        position: absolute;
+        max-width: 645px;
+        width: 100%;
+        height: 1px;
+        background-color: #EBEBF1;
+        top: 65px;
+        left: 0;
+    }
+
+    .search-wrapper__img {
+        padding-left: 0;
+    }
+
+    .user {
+        display: none;
+    }
+
+    .user-sm {
+        display: flex;
+        align-items: center;
+    }
+
+
+}
+
+@media screen and (max-width: 521px) {
+
+    .title {
+        font-size: 28px;
+    }
+
+    .partners-wrapper {
+        margin: 15px 0;
+        justify-content: center;
+    }
+
+    .partners-card {
+        margin: 15px 0;
+        max-width: 335px;
+    }
+}
