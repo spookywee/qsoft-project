@@ -176,6 +176,11 @@ body {
 @media screen and (max-width: 1190px) {
     .partners-wrapper {
         justify-content: space-between;
+        margin: 15px -37px;
+    }
+
+    .partners-card {
+        margin: 15px 37px;
     }
 }
 
